@@ -9776,6 +9776,10 @@ p.point_text_3b {
   text-align: center;
   letter-spacing: 5px;
 }
+.doctor_main_area .doctor .card-body a {
+  color: black;
+  text-decoration: none;
+}
 .doctor_main_area .doctor .card-body span {
   font-weight: 800;
 }
@@ -9799,6 +9803,11 @@ p.point_text_3b {
 .doctor_main_area .doctor .card-body:active {
   color: white;
   border-top: 5px solid white;
+}
+.doctor_main_area .doctor .card-body:hover a,
+.doctor_main_area .doctor .card-body:focus a,
+.doctor_main_area .doctor .card-body:active a {
+  color: white;
 }
 .doctor_main_area .doctor .card-body:hover:before,
 .doctor_main_area .doctor .card-body:focus:before,
@@ -9884,7 +9893,7 @@ p.point_text_3b {
     text-align: center;
   }
   .doctor_main_area .doctor_title {
-    margin: 12% 0 1% 0;
+    margin: 6% 0 1% 0;
   }
   .doctor_main_area .doc_dd_section {
     padding: 0 30% 4%;
@@ -9906,7 +9915,7 @@ p.point_text_3b {
     display: flex;
   }
   .doc_personal_page .personal_info {
-    background: url("https://i.ibb.co/hfBPK2v/doc-bg.webp");
+    background: url("https://i.ibb.co/JBwHZzR/personal-bg.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -9965,11 +9974,7 @@ p.point_text_3b {
     height: auto;
   }
   .doc_personal_page .doc_pro_section {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 4% auto;
-    position: relative;
+    margin: 5% auto;
   }
   .doc_personal_page .doc_pro_section h2 {
     text-align: center;
@@ -9977,101 +9982,55 @@ p.point_text_3b {
   }
   .doc_personal_page .doc_pro_section .pro_icon {
     padding: 0 0 0 7%;
-  }
-  .doc_personal_page .doc_pro_section img {
-    display: block;
-  }
-  .doc_personal_page .doc_pro_section .eyelid_text_overlay {
-    position: absolute;
-    opacity: 0;
-    transition: 0.5s ease;
-    top: 64.6%;
-    left: 14.2%;
-  }
-  .doc_personal_page .doc_pro_section .eyelid_text_overlay p {
-    background-color: rgba(34, 46, 50, 0.7803921569);
-    color: white;
-    font-weight: 800;
-    font-size: 20px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 182px;
-    width: 182px;
-    transform: translate(-50%, -50%);
-    border-radius: 999em;
+    align-content: flex-start;
+    flex-flow: row wrap;
   }
-  .doc_personal_page .doc_pro_section .eyebag_text_overlay {
+  .doc_personal_page .doc_pro_section .icon_content {
+    position: relative;
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden;
+  }
+  .doc_personal_page .doc_pro_section .icon_content .content-overlay {
+    background: rgba(0, 0, 0, 0.7);
     position: absolute;
+    /* height: 99%; */
+    /* width: 100%; */
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
     opacity: 0;
-    transition: 0.5s ease;
-    top: 64.6%;
-    left: 37.9%;
-  }
-  .doc_personal_page .doc_pro_section .eyebag_text_overlay p {
-    background-color: rgba(34, 46, 50, 0.7803921569);
-    color: white;
-    font-weight: 800;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 182px;
-    width: 182px;
-    transform: translate(-50%, -50%);
     border-radius: 999em;
+    transition: all 0.4s ease-in-out 0s;
   }
-  .doc_personal_page .doc_pro_section .mouth_text_overlay {
-    position: absolute;
-    opacity: 0;
-    transition: 0.5s ease;
-    top: 64.6%;
-    left: 61.6%;
-  }
-  .doc_personal_page .doc_pro_section .mouth_text_overlay p {
-    background-color: rgba(34, 46, 50, 0.7803921569);
-    color: white;
-    font-weight: 800;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 182px;
-    width: 182px;
-    transform: translate(-50%, -50%);
-    border-radius: 999em;
-  }
-  .doc_personal_page .doc_pro_section .fat_remove_text_overlay {
-    position: absolute;
-    opacity: 0;
-    transition: 0.5s ease;
-    top: 64.6%;
-    left: 85.32%;
-  }
-  .doc_personal_page .doc_pro_section .fat_remove_text_overlay p {
-    background-color: rgba(34, 46, 50, 0.7803921569);
-    color: white;
-    font-weight: 800;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 182px;
-    width: 182px;
-    transform: translate(-50%, -50%);
-    border-radius: 999em;
-  }
-  .doc_personal_page .doc_pro_section .eyelid_text_overlay:hover {
+  .doc_personal_page .doc_pro_section .icon_content:hover .content-overlay {
     opacity: 1;
   }
-  .doc_personal_page .doc_pro_section .eyebag_text_overlay:hover {
+  .doc_personal_page .doc_pro_section .doc_text_overlay {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out 0s;
+  }
+  .doc_personal_page .doc_pro_section .icon_content:hover .doc_text_overlay {
+    top: 50%;
+    left: 50%;
     opacity: 1;
   }
-  .doc_personal_page .doc_pro_section .mouth_text_overlay:hover {
-    opacity: 1;
-  }
-  .doc_personal_page .doc_pro_section .fat_remove_text_overlay:hover {
-    opacity: 1;
+  .doc_personal_page .doc_pro_section .fade_bottom {
+    top: 80%;
   }
   .doc_personal_page .doc_certificate_section {
     display: flex;
@@ -10223,7 +10182,7 @@ p.point_text_3b {
     padding: 2% 18% 4% 22%;
   }
   .doc_personal_page .personal_info {
-    background: url("https://i.ibb.co/hfBPK2v/doc-bg.webp");
+    background: url("https://i.ibb.co/JBwHZzR/personal-bg.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -10282,11 +10241,7 @@ p.point_text_3b {
     height: auto;
   }
   .doc_personal_page .doc_pro_section {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 4% auto;
-    position: relative;
+    margin: 5% auto;
   }
   .doc_personal_page .doc_pro_section h2 {
     text-align: center;
@@ -10294,101 +10249,55 @@ p.point_text_3b {
   }
   .doc_personal_page .doc_pro_section .pro_icon {
     padding: 0 0 0 7%;
-  }
-  .doc_personal_page .doc_pro_section img {
-    display: block;
-  }
-  .doc_personal_page .doc_pro_section .eyelid_text_overlay {
-    position: absolute;
-    opacity: 0;
-    transition: 0.5s ease;
-    top: 64.6%;
-    left: 14.2%;
-  }
-  .doc_personal_page .doc_pro_section .eyelid_text_overlay p {
-    background-color: rgba(34, 46, 50, 0.7803921569);
-    color: white;
-    font-weight: 800;
-    font-size: 20px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 182px;
-    width: 182px;
-    transform: translate(-50%, -50%);
-    border-radius: 999em;
+    align-content: flex-start;
+    flex-flow: row wrap;
   }
-  .doc_personal_page .doc_pro_section .eyebag_text_overlay {
+  .doc_personal_page .doc_pro_section .icon_content {
+    position: relative;
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden;
+  }
+  .doc_personal_page .doc_pro_section .icon_content .content-overlay {
+    background: rgba(0, 0, 0, 0.7);
     position: absolute;
+    /* height: 99%; */
+    /* width: 100%; */
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
     opacity: 0;
-    transition: 0.5s ease;
-    top: 64.6%;
-    left: 37.9%;
-  }
-  .doc_personal_page .doc_pro_section .eyebag_text_overlay p {
-    background-color: rgba(34, 46, 50, 0.7803921569);
-    color: white;
-    font-weight: 800;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 182px;
-    width: 182px;
-    transform: translate(-50%, -50%);
     border-radius: 999em;
+    transition: all 0.4s ease-in-out 0s;
   }
-  .doc_personal_page .doc_pro_section .mouth_text_overlay {
-    position: absolute;
-    opacity: 0;
-    transition: 0.5s ease;
-    top: 64.6%;
-    left: 61.6%;
-  }
-  .doc_personal_page .doc_pro_section .mouth_text_overlay p {
-    background-color: rgba(34, 46, 50, 0.7803921569);
-    color: white;
-    font-weight: 800;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 182px;
-    width: 182px;
-    transform: translate(-50%, -50%);
-    border-radius: 999em;
-  }
-  .doc_personal_page .doc_pro_section .fat_remove_text_overlay {
-    position: absolute;
-    opacity: 0;
-    transition: 0.5s ease;
-    top: 64.6%;
-    left: 85.32%;
-  }
-  .doc_personal_page .doc_pro_section .fat_remove_text_overlay p {
-    background-color: rgba(34, 46, 50, 0.7803921569);
-    color: white;
-    font-weight: 800;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 182px;
-    width: 182px;
-    transform: translate(-50%, -50%);
-    border-radius: 999em;
-  }
-  .doc_personal_page .doc_pro_section .eyelid_text_overlay:hover {
+  .doc_personal_page .doc_pro_section .icon_content:hover .content-overlay {
     opacity: 1;
   }
-  .doc_personal_page .doc_pro_section .eyebag_text_overlay:hover {
+  .doc_personal_page .doc_pro_section .doc_text_overlay {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out 0s;
+  }
+  .doc_personal_page .doc_pro_section .icon_content:hover .doc_text_overlay {
+    top: 50%;
+    left: 50%;
     opacity: 1;
   }
-  .doc_personal_page .doc_pro_section .mouth_text_overlay:hover {
-    opacity: 1;
-  }
-  .doc_personal_page .doc_pro_section .fat_remove_text_overlay:hover {
-    opacity: 1;
+  .doc_personal_page .doc_pro_section .fade_bottom {
+    top: 80%;
   }
   .doc_personal_page .doc_certificate_section {
     display: flex;
@@ -10536,7 +10445,7 @@ p.point_text_3b {
     text-align: center;
   }
   .doc_personal_page .personal_info {
-    background: url("https://i.ibb.co/hfBPK2v/doc-bg.webp");
+    background: url("https://i.ibb.co/JBwHZzR/personal-bg.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -10591,6 +10500,12 @@ p.point_text_3b {
   }
   .doc_personal_page .personal_info .card-img-top {
     height: auto;
+  }
+  .doc_personal_page .pro_icon {
+    display: none;
+  }
+  .doc_personal_page .pro_icon_sm img {
+    width: 70%;
   }
   .doc_personal_page .doc_pro_section {
     display: flex;
@@ -10745,10 +10660,10 @@ p.point_text_3b {
     transform: translate(4px, 37px) !important;
   }
   .doc_personal_page .personal_info {
-    background: url("https://i.ibb.co/hfBPK2v/doc-bg.webp");
+    background: url("https://i.ibb.co/JBwHZzR/personal-bg.webp");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: initial;
     box-shadow: 4px 10px 10px rgba(0, 0, 0, 0.1607843137);
     margin-top: 21%;
   }
@@ -10816,6 +10731,12 @@ p.point_text_3b {
   .doc_personal_page .doc_pro_section h2 {
     text-align: center;
     color: #ae955c;
+  }
+  .doc_personal_page .doc_pro_section .pro_icon {
+    display: none;
+  }
+  .doc_personal_page .doc_pro_section .pro_icon_sm img {
+    width: 70%;
   }
   .doc_personal_page .doc_certificate_section {
     display: flex;
